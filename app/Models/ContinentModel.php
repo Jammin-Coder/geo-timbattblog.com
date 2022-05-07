@@ -11,7 +11,7 @@ class ContinentModel extends Model
     use HasFactory;
     public $table = 'continents';
 
-    const CONTINENTS = ['north_america', 'south_america', 'africa', 'europe', 'asia', 'oceania'];
+    const CONTINENTS = ['north america', 'south america', 'africa', 'europe', 'asia', 'oceania'];
 
     public static function getCountriesFromContinent($continent_name) {
         $countries_json = DB::selectone(

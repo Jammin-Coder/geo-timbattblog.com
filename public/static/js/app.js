@@ -40,7 +40,9 @@ getSelectedAnswer = (answers, submittedAnswer) => {
     return selectedAnswer;
 }
 
+let buttonHasBeenClicked = false;
 handleQuizAnswer = (submittedAnswer, correctAnswer) => {
+    if (buttonHasBeenClicked) return;
     const answers = document.querySelectorAll('.answer');
     const messageElement = document.querySelector('.message');
     const nextButton = document.querySelector('.quiz-next');
@@ -67,4 +69,5 @@ handleQuizAnswer = (submittedAnswer, correctAnswer) => {
         window.location.href = window.location;
     }
 
+    buttonHasBeenClicked = true;
 }

@@ -9,3 +9,6 @@ Route::get('/', [HomeController::class, 'home']);
 Route::get('/{continent}/index', [CountriesController::class, 'index']);
 
 Route::get('/{continent}/quiz', [CountriesController::class, 'quiz']);
+Route::get('/attribution', function () {
+    return view('attribution');
+});

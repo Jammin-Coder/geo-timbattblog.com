@@ -6,10 +6,27 @@
     margin: 2em;
 }
 
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
 .mb-2 {
-    margin-bottom: 2;
+    margin-bottom: 2em;
 }
 
 .mb-4 {
     margin-bottom: 4em;
+}
+
+
+.w\=100\% {
+	width: 100%;
+}
+.p\=3 {
+	padding: 3rem;
+}
+
+.no-translate-on-hover:hover {
+    transform: translate(0px, 0px);
 }

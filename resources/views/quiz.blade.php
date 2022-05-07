@@ -1,10 +1,10 @@
 @extends('layouts.base')
 
-@section('title', 'TEST')
+@section('title', 'Quiz')
 
 @section('content')
 <div class='fluid flex col gap-2 justify-center align-center'>
-    <h1 class='message text-center mb-2'>What country is this?<h1>
+    <h1 class='message text-center mb-2'>What country in {{ $continent }} is this?<h1>
     <div class='flex justify-center'>
         <img src="/static/maps/{{ strtolower($continent) }}/{{ $iso }}/256.png" alt="" class='quiz-image'>
     </div>
