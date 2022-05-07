@@ -6,21 +6,21 @@
 
 <div class='flex align-center col mb-4'>
     <div>
-        <h1 class='text-center'>{{ continent }}</h1>
-        <div><img src="/static/maps/{{ continent }}/{{ continent }}.png }}" alt=""></div>
+        <h1 class='text-center'>{{ $continent }}</h1>
+        <div><img src="/static/maps/{{ $continent }}/{{ $continent }}.png }}" alt=""></div>
     </div>
     <div class='flex gap-2'>
-        <a href="/{{ continent }}/quiz" class='btn'>Take quiz</a>
+        <a href="/{{ $continent }}/quiz" class='btn'>Take quiz</a>
     </div>
 </div>
 <div class='flex col fluid justify-center align-center'>
-    <h2 class='text=center mb=2'>The territories of {{ continent }}</h2>
+    <h2 class='text=center mb=2'>The territories of {{ $continent }}</h2>
     <section class='region-selection'>
         
         @foreach ($countries as $country)
             <div class='select-region card'>
-                <p class='header'>{{ country->country }}</p>
-                <img src='{{ country->image_url }}' class='fluid'>
+                <p class='header'>{{ $country['country'] }}</p>
+                <img loading='lazy' src='/static/maps/{{ $continent }}/{{ $country["iso"] }}/256.png' class='fluid'>
             </div>
         @endforeach
 
